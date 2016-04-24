@@ -1,0 +1,4 @@
+{
+  "main": "net.rmelick.vertxdocker.vertx.server.VertxServer",
+  "author": "Russell Melick"
+}

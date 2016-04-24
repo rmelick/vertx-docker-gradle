@@ -7,22 +7,20 @@ repositories {
   mavenCentral()
 }
 
-configurations {
-  zippedModule {
-    description 'Built zips for putting inside the docker container'
-    transitive = false // since the zip already includes everything
-  }
-}
+def modules = [
+    ':mod-module:vertxModuleZip'
+]
 
-dependencies {
-  zippedModule project(path: ':mod-module', configuration: 'archives')
-}
 
 // note that this task needs to be defined above the docker
 // configuration in this file to work correctly
 task copyZips(type: Copy) {
-  from configurations.zippedModule.getFiles()
+  dependsOn modules
+  from modules
   into 'build/mods/'
+  // TODO this explicit depends is a bit hacky.  Need to figure out
+  // proper way to hook up dependencies from other task
+
 }
 
 docker {
