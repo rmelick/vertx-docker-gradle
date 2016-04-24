@@ -17,7 +17,7 @@ public class VertxServer extends Verticle  {
 
 
         String file = req.path().equals("/") ? "index.html" : req.path();
-        req.response().sendFile("webroot/" + file);
+        req.response().end("Hello from the docker container.");
       }
     }).listen(8080);
   }
