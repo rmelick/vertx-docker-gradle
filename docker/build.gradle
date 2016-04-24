@@ -1,3 +1,9 @@
 plugins {
-    id "idea"
+  id "idea"
+  id "com.palantir.docker" version "0.6.0"
+}
+
+docker {
+  name "vertx-docker-gradle"
+  files "."
 }

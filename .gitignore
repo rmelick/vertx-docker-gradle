@@ -1,4 +1,5 @@
-.gradle
+*/build/
+.gradle/
 .DS_Store
 *.iws
 *.iml

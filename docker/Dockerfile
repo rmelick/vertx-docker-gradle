@@ -1,4 +1,4 @@
 FROM java:8
 
-ADD vert.x-2.1.5 /opt/vertx/
+ADD vert.x-2.1.5.tar.gz /opt/vertx/
 ENV PATH $PATH:/opt/vertx/vert.x-2.1.5/bin
