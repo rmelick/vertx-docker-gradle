@@ -1,0 +1,29 @@
+plugins {
+  id 'idea'
+  id 'maven'
+}
+
+repositories {
+  mavenCentral()
+}
+
+configurations {
+  vertxModule {
+    description 'Dependencies directly required by the vertx module'
+  }
+}
+
+dependencies {
+  vertxModule project(':vertx')
+}
+
+task vertxModuleZip(type: Zip) {
+  from (configurations.vertxModule) {
+    into 'lib'
+  }
+  from 'mod.json'
+}
+
+artifacts {
+  archives vertxModuleZip
+}

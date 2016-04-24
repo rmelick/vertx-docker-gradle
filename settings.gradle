@@ -1,3 +1,4 @@
 include 'vertx'
 include 'shared-lib'
 include 'docker'
+include 'mod-module'

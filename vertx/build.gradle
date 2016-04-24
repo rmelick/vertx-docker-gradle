@@ -1,6 +1,6 @@
 plugins {
-  id "idea"
-  id "java"
+  id 'idea'
+  id 'java'
 }
 
 repositories {
