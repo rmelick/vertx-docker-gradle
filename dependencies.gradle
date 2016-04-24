@@ -1,5 +1,6 @@
 ext.deps = [
     external: [
+        "guava": "com.google.guava:guava:19.0",
         "vertx-core": "io.vertx:vertx-core:2.1.5",
         "vertx-platform": "io.vertx:vertx-platform:2.1.5"
     ]

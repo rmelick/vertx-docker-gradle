@@ -8,6 +8,8 @@ repositories {
 }
 
 dependencies {
+  compile project(':shared-lib')
+
   compile deps.external.'vertx-core'
   compile deps.external.'vertx-platform'
 }
