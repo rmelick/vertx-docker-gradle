@@ -1,3 +1,13 @@
 plugins {
-    id "idea"
+  id "idea"
+  id "java"
+}
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  compile deps.external.'vertx-core'
+  compile deps.external.'vertx-platform'
 }
